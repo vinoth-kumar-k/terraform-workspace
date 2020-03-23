@@ -1,0 +1,4 @@
+*.tfstate*
+*.tfvars
+*.txt
+.terraform
