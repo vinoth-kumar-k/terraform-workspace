@@ -12,7 +12,7 @@ resource "aws_instance" "example" {
   key_name = "Devops2"
 
   tags {
-    Name = "example"
+    Name = "example 1"
   }
 
   provisioner "local-exec" {
