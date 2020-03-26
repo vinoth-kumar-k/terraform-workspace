@@ -4,18 +4,20 @@ provider "aws" {
 }
 
 resource "aws_instance" "example" {
-  ami           = "ami-2757f631"
-  instance_type = "t2.micro"
+  ami             = "ami-2757f631"
+  instance_type   = "t2.micro"
   security_groups = ["default"]
-  key_name = "default"
+  key_name        = "default"
+
   tags {
     Name = "earth"
   }
+
   provisioner "local-exec" {
     command = "echo ${aws_instance.example.public_ip} > ip_address.txt"
   }
 }
 
-output "ip"{
-value = "${aws_instance.example.public_ip}"
+output "ip" {
+  value = "${aws_instance.example.public_ip}"
 }
