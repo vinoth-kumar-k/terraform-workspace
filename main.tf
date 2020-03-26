@@ -4,8 +4,8 @@ provider "aws" {
 }
 
 resource "aws_instance" "example" {
-  ami             = "ami-2757f631"
-  instance_type   = "t2.micro"
+  ami           = "ami-2757f631"
+  instance_type = "t2.micro"
 
   tags {
     Name = "earth"
