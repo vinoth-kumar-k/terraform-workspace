@@ -6,15 +6,11 @@ provider "aws" {
 resource "aws_instance" "example" {
   ami           = "ami-2757f631"
   instance_type = "t2.micro"
-
-  security_groups = ["HHITUSSH"]
-
-  key_name = "Devops2"
-
+  security_groups = ["default"]
+  key_name = "default"
   tags {
-    Name = "example 1"
+    Name = "earth"
   }
-
   provisioner "local-exec" {
     command = "echo ${aws_instance.example.public_ip} > ip_address.txt"
   }
