@@ -15,3 +15,7 @@ resource "aws_instance" "example" {
     command = "echo ${aws_instance.example.public_ip} > ip_address.txt"
   }
 }
+
+output "ip"{
+value = "${aws_instance.example.public_ip}"
+}

@@ -1,5 +1,2 @@
 variable region {
 }
-output "ip"{
-value = "${aws_instance.example.public_ip}"
-}
